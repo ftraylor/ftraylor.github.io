@@ -14,4 +14,4 @@ A place to include any other types of information that you'd like to include abo
 
 [traylor@utdallas.edu](mailto:traylor@utdallas.edu)
 
-[My CV](/images/Frederic Traylor CV.pdf)
+[My CV](images/Frederic Traylor CV.pdf "My CV")
