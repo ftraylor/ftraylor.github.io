@@ -6,7 +6,7 @@
 name: Fred Traylor
 
 # Short bio or description (displayed in the header)
-description: Web Developer from Somewhere
+description: MS Social Data Analytics and Research, UT Dallas
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: https://raw.githubusercontent.com/ftraylor/ftraylor.github.io/master/images/fredtraylor1.jpg
@@ -18,8 +18,8 @@ avatar: https://raw.githubusercontent.com/ftraylor/ftraylor.github.io/master/ima
 # Includes an icon in the footer for each username you enter
 footer-links:
   email: traylor@utdallas.edu
-  github: barryclark/jekyll-now
-  linkedin: linkedin.com/in/frederictraylor
+  github: ftraylor/ftraylor.github.io
+  linkedin: frederictraylor
   twitter: fredtraylor1
 
 
