@@ -1,0 +1,81 @@
+<head>
+<link rel="stylesheet" type="text/css" href="stmarkdown.css">
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+</head>
+<h1><a href="#a-study-of-happy-planet-index" id="a-study-of-happy-planet-index">A Study of Happy Planet Index.</a></h1>
+<pre><code>. webuse set &quot;https://raw.githubusercontent.com/kho777/data-visualization/master
+&gt; /data&quot;
+(prefix now &quot;https://raw.githubusercontent.com/kho777/data-visualization/master/
+&gt; data&quot;)
+
+. webuse &quot;hpi2016dataonly&quot;, clear
+
+</code></pre>
+<p>Taking the log of GDP Per capita to make the variable more linear.</p>
+<pre><code>. gen lgdp=log(GDPcapitaPPP)
+
+. label variable lgdp &quot;GDP Per Capita (logged)&quot;
+
+</code></pre>
+<p>Doing the same the create a variable out of Population</p>
+<pre><code>. gen lpop=log(Population)
+
+. label variable lgdp &quot;Population&quot;
+
+</code></pre>
+<p>Create multiple variables for plots of Happy Planet Index using Region. Use the label statements to clean and shorten the variable labels for legend</p>
+<pre><code>. separate HappyPlanetIndex, by(Region) shortlabel
+
+              storage   display    value
+variable name   type    format     label      variable label
+--------------------------------------------------------------------------------
+HappyPlanetIn~1 double  %10.0g                Region == Americas
+HappyPlanetIn~2 double  %10.0g                Region == Asia Pacific
+HappyPlanetIn~3 double  %10.0g                Region == Europe
+HappyPlanetIn~4 double  %10.0g                Region == Middle East and North
+                                                Africa
+HappyPlanetIn~5 double  %10.0g                Region == Post-communist
+HappyPlanetIn~6 double  %10.0g                Region == Sub Saharan Africa
+
+. lab var HappyPlanetIndex1 &quot;Americas&quot;
+
+. lab var HappyPlanetIndex2 &quot;Asia Pacific&quot;
+
+. lab var HappyPlanetIndex3 &quot;Europe&quot;
+
+. lab var HappyPlanetIndex4 &quot;Middle East and North Africa&quot;
+
+. lab var HappyPlanetIndex5 &quot;Post-communist&quot;
+
+. lab var HappyPlanetIndex6 &quot;Sub Saharan Africa&quot;
+
+</code></pre>
+<h2><a href="#explore-relationship-between-hpi-and-gdp-per-capita" id="explore-relationship-between-hpi-and-gdp-per-capita">Explore relationship between HPI and GDP Per Capita</a></h2>
+<pre><code>. scatter HappyPlanetIndex? lgdp, ytitle(Happy Planent Index)
+
+</code></pre>
+ <img src="hpilgdp.png" height="400" alt="HPI~GDPPC" >
+<pre><code>. regress HappyPlanetIndex lgdp lpop
+
+      Source |       SS           df       MS      Number of obs   =       140
+-------------+----------------------------------   F(2, 137)       =      7.07
+       Model |   696.16443         2  348.082215   Prob &gt; F        =    0.0012
+    Residual |   6747.6441       137  49.2528767   R-squared       =    0.0935
+-------------+----------------------------------   Adj R-squared   =    0.0803
+       Total |  7443.80853       139  53.5525794   Root MSE        =     7.018
+
+------------------------------------------------------------------------------
+HappyPlane~x |      Coef.   Std. Err.      t    P&gt;|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+        lgdp |   1.338241   .4071885     3.29   0.001     .5330539    2.143428
+        lpop |   .7909432   .3684961     2.15   0.034     .0622676    1.519619
+       _cons |   2.031363   7.264462     0.28   0.780    -12.33361    16.39634
+------------------------------------------------------------------------------
+
+</code></pre>
+<p>The regression shows that for every unit increase in GDP Per Capita (logged), a 1.3382 unit increase in Happy Planet Index is predicted. Population has a factor of &lt;&lt;dd_display:%9.4f eb[1,2] per unit impact.</p>
