@@ -10,4 +10,5 @@ I am a student at the University of Texas at Dallas, where I am working to earn 
 ### Contact me
 
 [traylor@utdallas.edu](mailto:traylor@utdallas.edu)
+
 Here is [my CV] (ftraylor.github.io/Frederic Traylor Public CV.pdf)
