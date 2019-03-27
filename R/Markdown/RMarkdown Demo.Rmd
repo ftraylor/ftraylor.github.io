@@ -1,0 +1,68 @@
+---
+title: "RMarkdown-demo"
+output: 
+  html_notebook: 
+    fig_caption: yes
+    number_sections: yes
+    toc: yes
+  html_document: 
+    css: mystyle.css
+    fig_caption: yes
+    keep_md: yes
+    number_sections: yes
+    toc: yes
+---
+
+In this illustration, the Gapminder package is used for plotting charts.  This data set comes with six variables including country, continent, year, life expectancy, population and GDP per capita. 
+
+Let's install the package, load the data and examine the dataset:
+```{r echo=TRUE, error=FALSE, message=FALSE, results='hide'}
+require(gapminder)
+summary(gapminder) # Summary of Gapminder dataset
+str(gapminder) # Structure of dataset
+
+gm=gapminder
+head(gm)
+summary(gm)
+```
+```{r echo=TRUE, results='hide'}
+table(gm$country) # List values of country variable 
+
+```
+
+
+Simple Scatterplot:
+
+```{r echo=TRUE}
+require(ggplot2)
+p <- ggplot(data = gm,
+            mapping = aes(x = gdpPercap,
+                          y = lifeExp))  # Shows nothing. Why?
+p + geom_point()
+
+```
+
+First, we need to start the data component, then add the aesthetic mapping defining the basics (i.e. variables), followed by the geometric objects.  Here is an alternative: 
+
+```{r echo=TRUE}
+# Alternative
+p <- ggplot(data=gm, aes(x=gdpPercap, y=lifeExp))
+```
+
+What is still missing?
+
+```{r echo=TRUE}
+p + geom_point()
+```
+
+Now, we can add more features to the chart.
+
+```{r echo=TRUE}
+# Add some color grouping
+p <- ggplot(data = gm,
+            mapping = aes(x = gdpPercap,
+                          y = lifeExp, color=continent))
+p + geom_point()
+
+```
+Now you can knit the Markdown file and publish it to either Rpub or your own github website!
