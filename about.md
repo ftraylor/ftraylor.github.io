@@ -11,4 +11,4 @@ I am a student at the University of Texas at Dallas, where I am working to earn 
 
 [traylor@utdallas.edu](mailto:traylor@utdallas.edu)
 
-Here is [my CV] (ftraylor.github.io/Frederic Traylor Public CV.pdf)
+Here is [my CV] (https://ftraylor.github.io/Frederic%20Traylor%20Public%20CV.pdf)
