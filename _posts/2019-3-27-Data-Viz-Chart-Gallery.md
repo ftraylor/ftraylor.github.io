@@ -7,4 +7,4 @@ title: Data Visualizations Chart Gallery
 
 [R Markdown demo](R/Markdown/RMarkdown-Demo.html "R Markdown demo")
 
-<iframe width"560" height="315" src="http://ftraylor.github.io/maps_demo.html" frameborder="0"> </iframe>
+<iframe width"560" height="315" src="http://ftraylor.github.io/maps_demo.html" frameborder="0" allowfullscreen></iframe>
