@@ -7,4 +7,4 @@ title: Data Visualizations Chart Gallery
 
 [R Markdown demo](R/Markdown/RMarkdown-Demo.html "R Markdown demo")
 
-[Find Me](maps_demo.html)
+[Find Me](content/maps_demo.html)
