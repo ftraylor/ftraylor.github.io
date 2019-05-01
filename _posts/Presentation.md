@@ -12,5 +12,5 @@ permalink: /termpaper/
 * Climate Change has become a senstive topic in popular discourse, 
 
 
-[All Factors]("ftraylor/ftraylor.github.io/content/TermPaper/All Factors.svg")
+[All Factors]("/content/TermPaper/All Factors.svg")
 
