@@ -8,9 +8,5 @@ permalink: /termpaper/
 # EPPS 6356: Data Visualization
 
 ## Term Paper Presentation
-### Background
-* Climate Change has become a senstive topic in popular discourse, 
 
-
-![All Factors]("/content/TermPaper/All Factors.svg"){:class="img-responsive"}
-
+<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plot.ly/~fredtraylor1/1.embed"></iframe>
