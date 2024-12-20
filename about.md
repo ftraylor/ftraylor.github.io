@@ -1,14 +1,11 @@
 ---
+title: "About"
 layout: page
-title: About
 permalink: /about/
 ---
 
-I am a student at the University of Texas at Dallas, where I am working to earn my MS in Social Data Analytics and Research in order to further build upon the research capacities I developed during my undergraduate degree (BA Sociology). Upon graduation from UT Dallas, I plan to earn a Ph.D. in Sociology and perform research at a university or other public or nonprofit institution. I am primarily interested in conducting research into the public understanding and opinions of science, especially climate change, and I am also interested in environmental sustainability, religious life, and survey research methodology.
-
+Frederic Traylor is a PhD student in the Department of Sociology at Rutgers University -- New Brunswick. He researches public opinion on climate change and climate change solutions using survey and computational methods. Among other projects, he is researching the representativeness of novel sampling methods for climate change surveys, the perceived moral hazard of technological solutions to climate change, the role of institutional trust in advancing support for climate policy, and how climate change attitudes affect and are affected by parenthood.
 
 ### Contact me
 
-[traylor@utdallas.edu](mailto:traylor@utdallas.edu)
-
-[Check out my CV here.](https://ftraylor.github.io/Frederic%20Traylor%20Public%20CV.pdf)
+Email: frederic [dot] traylor [at] rutgers.edu
